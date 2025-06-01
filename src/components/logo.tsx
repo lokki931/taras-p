@@ -8,7 +8,7 @@ export const Logo = () => {
       className="flex items-center gap-x-2 text-green-500 font-bold hover:opacity-70"
     >
       <Image src={"./logo.svg"} width={32} height={32} alt="logo" />
-      Taras
+      <span>Taras P.</span>
     </Link>
   );
 };
