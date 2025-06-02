@@ -4,7 +4,7 @@ import { Logo } from "./logo";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white">
+    <header className="py-4 border-b border-green-600">
       <Container>
         <div className="flex items-center justify-between">
           <Logo />

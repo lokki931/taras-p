@@ -7,8 +7,8 @@ export const Logo = () => {
       href={"/"}
       className="flex items-center gap-x-2 text-green-500 font-bold hover:opacity-70"
     >
-      <Image src={"./logo.svg"} width={32} height={32} alt="logo" />
-      <span>Taras P.</span>
+      <Image src="/newLogo.png" width={50} height={50} alt="logo" />
+      <span>Web Dev</span>
     </Link>
   );
 };

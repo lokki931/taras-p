@@ -3,6 +3,7 @@ import { useIsMobile } from "@/hooks/is-mobile";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import clsx from "clsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
 
@@ -52,7 +53,10 @@ export const Navbar = () => {
               >
                 <Link
                   href={link.href}
-                  className="w-full text-3xl hover:opacity-70 p-2 border rounded-b-md"
+                  className={clsx(
+                    "w-full text-3xl hover:opacity-70 p-2 border rounded-b-md",
+                    pathName === link.href && "opacity-70 font-bold"
+                  )}
                 >
                   {link.name}
                 </Link>
@@ -69,9 +73,10 @@ export const Navbar = () => {
           <li key={link.name + idx}>
             <Link
               href={link.href}
-              className={`${
-                pathName === link.href ? "text-green-600" : ""
-              } hover:text-green-600`}
+              className={clsx(
+                "hover:text-green-400 text-green-600",
+                pathName === link.href && "text-green-400 font-bold"
+              )}
             >
               {link.name}
             </Link>

@@ -1,9 +1,4 @@
-import { Container } from "@/components/container";
-
+import { HomeView } from "@/components/pages/views/home/home-view";
 export default function Home() {
-  return (
-    <Container>
-      <div className="text-2xl text-amber-300">Start</div>
-    </Container>
-  );
+  return <HomeView />;
 }

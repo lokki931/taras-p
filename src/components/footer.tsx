@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="py-4 border-t border-white">
+    <footer className="py-4 border-t border-green-600">
       <Container>
         <div className="flex flex-wrap justify-between items-center">
           <Logo />
@@ -20,7 +20,7 @@ export const Footer = () => {
               <FaLinkedin className="text-green-600 w-6 h-6 transition hover:opacity-80 hover:scale-110" />
             </Link>
           </div>
-          <div className="">
+          <div className="text-green-600">
             © {new Date().getFullYear()} Taras P. All rights reserved.
           </div>
         </div>
