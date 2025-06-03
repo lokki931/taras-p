@@ -45,7 +45,7 @@ export const Navbar = () => {
           />
         )}
         {isOpen && (
-          <ul className="fixed inset-0 bg-green-800 flex flex-col  justify-center gap-y-5">
+          <ul className="fixed inset-0 bg-green-800 flex flex-col  justify-center gap-y-5 z-1">
             {links.map((link, idx) => (
               <li
                 key={link.name + idx}
@@ -53,6 +53,7 @@ export const Navbar = () => {
               >
                 <Link
                   href={link.href}
+                  onClick={() => setIsOpen(false)}
                   className={clsx(
                     "w-full text-3xl hover:opacity-70 p-2 border rounded-b-md",
                     pathName === link.href && "opacity-70 font-bold"

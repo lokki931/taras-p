@@ -1,13 +1,14 @@
 "use client";
 
-import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRocket, FaPaintBrush, FaHandshake } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import { Benefit } from "./benefit";
 
 export function Hero() {
   return (
-    <>
+    <div className="py-6">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col justify-center items-start  gap-y-4 text-green-600">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
@@ -35,7 +36,7 @@ export function Hero() {
           </Link>
         </div>
         <div>
-          <div className="border-animate w-[420px] h-[420px] rounded-full">
+          <div className="border-animate w-[300px] md:w-[420px] h-[300px]  md:h-[420px]  rounded-full">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/hero.png"
@@ -65,26 +66,6 @@ export function Hero() {
           description="Clear communication and responsible development."
         />
       </div>
-    </>
-  );
-}
-
-function Benefit({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
-      {icon}
-      <h3 className="text-xl font-semibold mt-4 mb-2 text-green-700">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
 }
