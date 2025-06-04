@@ -1,6 +1,7 @@
 "use client";
 import { useIsMobile } from "@/hooks/is-mobile";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import clsx from "clsx";
@@ -9,18 +10,22 @@ import { RiCloseLargeFill } from "react-icons/ri";
 
 const links = [
   {
+    id: uuidv4(),
     href: "/",
     name: "Home",
   },
   {
-    href: "/services",
-    name: "Services",
+    id: uuidv4(),
+    href: "/skills",
+    name: "Skills",
   },
   {
+    id: uuidv4(),
     href: "/portfolio",
     name: "Portfolio",
   },
   {
+    id: uuidv4(),
     href: "/about",
     name: "About Me",
   },
@@ -46,9 +51,9 @@ export const Navbar = () => {
         )}
         {isOpen && (
           <ul className="fixed inset-0 bg-green-800 flex flex-col  justify-center gap-y-5 z-1">
-            {links.map((link, idx) => (
+            {links.map((link) => (
               <li
-                key={link.name + idx}
+                key={link.id}
                 className="max-w-3/4 w-full mx-auto flex flex-col"
               >
                 <Link
@@ -70,8 +75,8 @@ export const Navbar = () => {
   return (
     <nav>
       <ul className="flex gap-x-4">
-        {links.map((link, idx) => (
-          <li key={link.name + idx}>
+        {links.map((link) => (
+          <li key={link.id}>
             <Link
               href={link.href}
               className={clsx(

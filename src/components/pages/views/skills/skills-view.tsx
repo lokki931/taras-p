@@ -71,7 +71,7 @@ const learning = [
   },
 ];
 
-export function ServicesView() {
+export function SkillsView() {
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-green-600 py-6">
