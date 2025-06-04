@@ -10,7 +10,7 @@ import {
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
-export type Skill = {
+export type TSkill = {
   id: string;
   name: string;
   icon: JSX.Element;

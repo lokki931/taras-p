@@ -1,49 +1,11 @@
 "use client";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import clsx from "clsx";
-import { FaReact, FaGithub } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-import { TbBrandNextjs } from "react-icons/tb";
-
 import { Container } from "@/components/container";
-import Image from "next/image";
-
-const projects = [
-  {
-    id: uuidv4(),
-    title: "Milk Production Tracker",
-    description:
-      "This is a web application that allows farmers to track daily milk production, fat percentage, and calculate the estimated income based on fat-adjusted milk prices. Built with Next.js App Router, React, Tailwind CSS, Prisma, PostgreSQL, and Context API.",
-    image: "/01_img.png",
-    github: "https://github.com/lokki931/milk-track",
-    siteUrl: "https://milk-track-rho.vercel.app",
-    buildby: <TbBrandNextjs title="Built with Next." />,
-  },
-  {
-    id: uuidv4(),
-    title: "Finance Tracker",
-    description:
-      "Finance Tracker is a simple and efficient web application built with React and Vite. It allows users to track their financial transactions, filter records, paginate results, and visualize financial data with interactive charts.",
-    image: "/02_img.png",
-    github: "https://github.com/lokki931/tracker_finance",
-    siteUrl: "https://trackerfinance.vercel.app",
-    buildby: <FaReact title="Built with React" />,
-  },
-  {
-    id: uuidv4(),
-    title: "Habit Tracker",
-    description:
-      "A simple Habit Tracker built with React.js, Tailwind CSS, using Context API and localStorage for state and data persistence.",
-    image: "/03_img.png",
-    github: "https://github.com/lokki931/tracker-hobies",
-    siteUrl: "https://tracker-hobies.vercel.app/",
-    buildby: <FaReact title="Built with React" />,
-  },
-];
+import { Project } from "./project";
+import { projects } from "./data-portfolio";
 
 export function PortfolioView() {
-  const [isSingleColumn, setIsSingleColumn] = useState(false);
+  const [isSingleColumn, setIsSingleColumn] = useState(true);
 
   return (
     <Container>
@@ -69,61 +31,13 @@ export function PortfolioView() {
               : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           }`}
         >
-          {projects.map((project) => (
-            <div
+          {projects.map((project, idx) => (
+            <Project
               key={project.id}
-              className={clsx(
-                "shadow-md bg-green-100/10 shadow-green-600 px-4 py-6 hover:shadow-xs transition",
-                isSingleColumn && "flex flex-col md:flex-row gap-6"
-              )}
-            >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={600}
-                height={400}
-                className={clsx(
-                  "rounded-lg w-full h-48 object-cover",
-                  isSingleColumn &&
-                    "max-w-full md:max-w-sm  lg:max-w-md h-48 md:h-auto"
-                )}
-              />
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-1 text-green-700">
-                  {project.title}
-                </h3>
-                <p className="text-green-600 mb-3">
-                  {isSingleColumn
-                    ? project.description
-                    : project.description.length > 95
-                    ? project.description.slice(0, 95) + "..."
-                    : project.description}
-                </p>
-                <div className="flex items-center gap-4 text-green-600 text-xl">
-                  {project.buildby}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub
-                      title="View on GitHub"
-                      className="hover:text-green-500"
-                    />
-                  </a>
-                  <a
-                    href={project.siteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLink
-                      title="View on Site"
-                      className="hover:text-green-500"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
+              project={project}
+              idx={idx}
+              isSingleColumn={isSingleColumn}
+            />
           ))}
         </div>
       </div>
