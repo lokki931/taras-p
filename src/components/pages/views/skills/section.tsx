@@ -3,7 +3,7 @@ import { JSX } from "react";
 import { motion } from "framer-motion";
 type Props = {
   title: string;
-  skills: { name: string; icon: JSX.Element; level: number }[];
+  skills: { id: string; name: string; icon: JSX.Element; level: number }[];
   startIndex?: number;
 };
 const fadeInUp = {
@@ -21,14 +21,14 @@ export function Section({ title, skills, startIndex = 0 }: Props) {
       <div className="space-y-6">
         {skills.map((skill, index) => (
           <motion.div
-            key={index}
+            key={skill.id}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             custom={startIndex + index}
             variants={fadeInUp}
           >
-            <div className="flex items-center gap-4 mb-1">
+            <div className="flex items-center gap-4 mb-2">
               <div className="text-2xl">{skill.icon}</div>
               <span className="font-medium">{skill.name}</span>
             </div>
