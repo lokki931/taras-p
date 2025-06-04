@@ -1,9 +1,9 @@
 "use client";
-import { JSX } from "react";
 import { motion } from "framer-motion";
+import { Skill } from "./data-skills";
 type Props = {
   title: string;
-  skills: { id: string; name: string; icon: JSX.Element; level: number }[];
+  skills: Skill[];
   startIndex?: number;
 };
 const fadeInUp = {

@@ -9,9 +9,9 @@ import { Benefit } from "./benefit";
 export function Hero() {
   return (
     <div className="py-6">
-      <div className="flex flex-col md:flex-row items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-3">
         <div className="flex flex-col justify-center items-start  gap-y-4 text-green-600">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-4 animate-fade-in">
             Hi, I&apos;m Taras 👋
           </h1>
           <p className="text-xl md:text-2xl text-white mb-6 animate-fade-in delay-100">
@@ -36,7 +36,7 @@ export function Hero() {
           </Link>
         </div>
         <div>
-          <div className="border-animate w-[300px] md:w-[420px] h-[300px]  md:h-[420px]  rounded-full">
+          <div className="border-animate w-[300px] lg:w-[420px] h-[300px]  lg:h-[420px]  rounded-full">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/hero.png"
