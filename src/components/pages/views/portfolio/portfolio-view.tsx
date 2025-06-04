@@ -7,6 +7,7 @@ import { FaLink } from "react-icons/fa6";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import { Container } from "@/components/container";
+import Image from "next/image";
 
 const projects = [
   {
@@ -14,7 +15,7 @@ const projects = [
     title: "Milk Production Tracker",
     description:
       "This is a web application that allows farmers to track daily milk production, fat percentage, and calculate the estimated income based on fat-adjusted milk prices. Built with Next.js App Router, React, Tailwind CSS, Prisma, PostgreSQL, and Context API.",
-    image: "https://placehold.co/600x400",
+    image: "/01_img.png",
     github: "https://github.com/lokki931/milk-track",
     siteUrl: "https://milk-track-rho.vercel.app",
     buildby: <TbBrandNextjs title="Built with Next." />,
@@ -24,7 +25,7 @@ const projects = [
     title: "Finance Tracker",
     description:
       "Finance Tracker is a simple and efficient web application built with React and Vite. It allows users to track their financial transactions, filter records, paginate results, and visualize financial data with interactive charts.",
-    image: "https://placehold.co/600x400",
+    image: "/02_img.png",
     github: "https://github.com/lokki931/tracker_finance",
     siteUrl: "https://trackerfinance.vercel.app",
     buildby: <FaReact title="Built with React" />,
@@ -34,7 +35,7 @@ const projects = [
     title: "Habit Tracker",
     description:
       "A simple Habit Tracker built with React.js, Tailwind CSS, using Context API and localStorage for state and data persistence.",
-    image: "https://placehold.co/600x400",
+    image: "/03_img.png",
     github: "https://github.com/lokki931/tracker-hobies",
     siteUrl: "https://tracker-hobies.vercel.app/",
     buildby: <FaReact title="Built with React" />,
@@ -76,9 +77,11 @@ export function PortfolioView() {
                 isSingleColumn && "flex flex-col md:flex-row gap-6"
               )}
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={600}
+                height={400}
                 className={clsx(
                   "rounded-lg w-full h-48 object-cover",
                   isSingleColumn &&
