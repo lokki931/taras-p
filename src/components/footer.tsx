@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "./container";
 import { Logo } from "./logo";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -10,13 +10,10 @@ export const Footer = () => {
         <div className="flex flex-wrap justify-between items-center">
           <Logo />
           <div className="flex gap-4">
-            <Link href="https://www.facebook.com" target="_blank">
-              <FaFacebook className="text-green-600 w-6 h-6 transition hover:opacity-80 hover:scale-110" />
+            <Link href="https://github.com/lokki931" target="_blank">
+              <FaGithub className="text-green-600 w-6 h-6 transition hover:opacity-80 hover:scale-110" />
             </Link>
-            <Link href="https://www.instagram.com" target="_blank">
-              <FaInstagram className="text-green-600 w-6 h-6 transition hover:opacity-80 hover:scale-110" />
-            </Link>
-            <Link href="" target="_blank">
+            <Link href="https://linkedin.com/in/lokki931" target="_blank">
               <FaLinkedin className="text-green-600 w-6 h-6 transition hover:opacity-80 hover:scale-110" />
             </Link>
           </div>
