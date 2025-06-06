@@ -27,7 +27,7 @@ export const projects = [
     title: "Finance Tracker",
     description:
       "Finance Tracker is a simple and efficient web application built with React and Vite. It allows users to track their financial transactions, filter records, paginate results, and visualize financial data with interactive charts.",
-    image: "/02_img.png",
+    image: "/03_img.png",
     github: "https://github.com/lokki931/tracker_finance",
     siteUrl: "https://trackerfinance.vercel.app",
     buildby: <FaReact title="Built with React" />,
@@ -37,7 +37,7 @@ export const projects = [
     title: "Habit Tracker",
     description:
       "A simple Habit Tracker built with React.js, Tailwind CSS, using Context API and localStorage for state and data persistence.",
-    image: "/03_img.png",
+    image: "/02_img.png",
     github: "https://github.com/lokki931/tracker-hobies",
     siteUrl: "https://tracker-hobies.vercel.app/",
     buildby: <FaReact title="Built with React" />,
