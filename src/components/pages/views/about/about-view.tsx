@@ -18,7 +18,7 @@ const technologies = [
 export function AboutView() {
   return (
     <Container>
-      <div className="p-6">
+      <div className="py-6">
         <h1 className="text-3xl font-bold mb-4 text-green-600">About Me</h1>
         <div className="flex flex-col items-center gap-y-4">
           <Image
