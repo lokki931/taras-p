@@ -1,12 +1,11 @@
 "use client";
 import { useIsMobile } from "@/hooks/is-mobile";
-import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import clsx from "clsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
-import { usePathname } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 const links = [
