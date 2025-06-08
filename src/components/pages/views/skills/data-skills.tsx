@@ -65,7 +65,7 @@ export const tools = [
   },
   {
     id: uuidv4(),
-    name: "Figma (верстка по макетах)",
+    name: "Figma",
     icon: <FaFigma className="text-pink-500" />,
     level: 70,
   },
@@ -98,7 +98,7 @@ export const learning = [
   },
   {
     id: uuidv4(),
-    name: "Framer Motion (анімації)",
+    name: "Framer Motion",
     icon: <FaReact className="text-pink-400" />,
     level: 40,
   },

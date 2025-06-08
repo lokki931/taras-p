@@ -3,24 +3,22 @@ import { useState } from "react";
 import { Container } from "@/components/container";
 import { Project } from "./project";
 import { projects } from "./data-portfolio";
+import { useTranslations } from "next-intl";
 
 export function PortfolioView() {
+  const t = useTranslations("PortfolioPage");
   const [isSingleColumn, setIsSingleColumn] = useState(true);
 
   return (
     <Container>
       <div className="py-6">
-        <h1 className="text-3xl font-bold mb-4 text-green-600">My Projects</h1>
-        <p className="text-green-400 mb-6">
-          Here you can find a selection of my recent work — real-world projects
-          that demonstrate my skills in building responsive, modern web
-          applications.
-        </p>
+        <h1 className="text-3xl font-bold mb-4 text-green-600">{t("title")}</h1>
+        <p className="text-green-400 mb-6">{t("desc")}</p>
         <button
           onClick={() => setIsSingleColumn((prev) => !prev)}
-          className="mb-6 px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700"
+          className="hidden md:inline-block mb-6 px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700 cursor-pointer"
         >
-          {isSingleColumn ? "🔳 Grid View" : "📋 List View"}
+          {isSingleColumn ? `🔳 ${t("btn.grid")}` : `📋 ${t("btn.list")}`}
         </button>
 
         {/* Сітка */}

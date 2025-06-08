@@ -5,20 +5,26 @@ import Link from "next/link";
 import { FaRocket, FaPaintBrush, FaHandshake } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { Benefit } from "./benefit";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
+  const t = useTranslations("HomePage");
   return (
     <div className="py-6">
       <div className="flex flex-col md:flex-row items-center justify-between gap-3">
         <div className="flex flex-col justify-center items-start  gap-y-4 text-green-600">
           <h1 className="text-4xl lg:text-6xl font-bold mb-4 animate-fade-in">
-            Hi, I&apos;m Taras 👋
+            {t("title")} 👋
           </h1>
           <p className="text-xl md:text-2xl text-white mb-6 animate-fade-in delay-100">
-            I build simple and user-friendly interfaces:{" "}
+            {t("about")}:{" "}
             <span className="text-green-500">
               <Typewriter
-                words={["using React", "using Next.js", "using JavaScript"]}
+                words={[
+                  `${t("using.u1")}`,
+                  `${t("using.u2")}`,
+                  `${t("using.u3")}`,
+                ]}
                 loop={0} // 0 = infinite loop
                 cursor
                 cursorStyle="|"
@@ -32,7 +38,7 @@ export function Hero() {
             href="/portfolio"
             className="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all duration-300 animate-bounce"
           >
-            View Projects
+            {t("btn")}
           </Link>
         </div>
         <div>
@@ -52,18 +58,18 @@ export function Hero() {
       <div className="grid grid-cols-1 justify-between md:grid-cols-3 gap-6 w-full text-center my-8">
         <Benefit
           icon={<FaRocket className="w-10 h-10 mx-auto text-green-600" />}
-          title="Fast performance"
-          description="Optimized code and lightning-fast user interfaces."
+          title={t("benefits.b0.title")}
+          description={t("benefits.b0.desc")}
         />
         <Benefit
           icon={<FaPaintBrush className="w-10 h-10 mx-auto text-green-600" />}
-          title="Clean UI"
-          description="Beautiful, modern, and user-friendly interfaces."
+          title={t("benefits.b1.title")}
+          description={t("benefits.b1.desc")}
         />
         <Benefit
           icon={<FaHandshake className="w-10 h-10 mx-auto text-green-600" />}
-          title="Easy to work with"
-          description="Clear communication and responsible development."
+          title={t("benefits.b2.title")}
+          description={t("benefits.b2.desc")}
         />
       </div>
     </div>

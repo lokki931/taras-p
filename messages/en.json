@@ -1,0 +1,75 @@
+{
+  "HomePage": {
+    "title": "Hi, I'm Taras",
+    "about": "I build simple and user-friendly interfaces",
+    "using": {
+      "u1": "using React",
+      "u2": "using Next.js",
+      "u3": "using JavaScript"
+    },
+    "benefits": {
+      "b0": {
+        "title": "Fast performance",
+        "desc": "Optimized code and lightning-fast user interfaces."
+      },
+      "b1": {
+        "title": "Clean UI",
+        "desc": "Beautiful, modern, and user-friendly interfaces."
+      },
+      "b2": {
+        "title": "Easy to work with",
+        "desc": "Clear communication and responsible development."
+      }
+    },
+    "btn": "View Projects"
+  },
+  "SkillsPage": {
+    "title": "My Skills",
+    "desc": "Here are the tools and technologies I use regularly.",
+    "tools": "Tools",
+    "study": "Studying now"
+  },
+  "PortfolioPage": {
+    "title": "My Projects",
+    "desc": "Here you can find a selection of my recent work — real-world projects that demonstrate my skills in building responsive, modern web applications.",
+    "projects": {
+      "milk": {
+        "title": "Milk Production Tracker",
+        "description": "This is a web application that allows farmers to track daily milk production, fat percentage, and calculate estimated income."
+      },
+      "finance": {
+        "title": "Finance Tracker",
+        "description": "A simple web app for tracking financial transactions, visualizing data, and filtering records."
+      },
+      "habit": {
+        "title": "Habit Tracker",
+        "description": "A minimalist habit tracker using React and localStorage for persistence."
+      }
+    },
+    "btn": {
+      "list": "List View",
+      "grid": "Grid View",
+      "github": " View on GitHub",
+      "site": "View on Site"
+    }
+  },
+  "AboutPage": {
+    "title": "About Me",
+    "desc": {
+      "d0": "Hi! I'm a junior front-end developer who loves building modern, responsive web applications. I'm currently focused on learning <strong>Next.js</strong> and improving my skills in full-stack development.",
+      "d1": "I'm studying <strong>Software Engineering</strong> at <strong>Khmelnytskyi National University</strong>. Before that, I completed my college degree at <strong>Khmelnytskyi Polytechnic College</strong>, where I built a solid technical foundation.",
+      "d2": "In the next 5 years, my goal is to become a <strong>Senior Front-end Developer</strong> and to expand into <strong>mobile app development</strong> as well. I'm excited to grow in both web and mobile technologies and build high-quality user experiences."
+    },
+    "technologies": "Technologies I Use",
+    "connect": "Connect with Me"
+  },
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "about": "About Me"
+  },
+  "footer": {
+    "copy": "All rights reserved."
+  }
+}

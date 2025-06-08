@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Container } from "@/components/container";
+import { useTranslations } from "next-intl";
 
 const technologies = [
   "JavaScript",
@@ -16,10 +18,11 @@ const technologies = [
 ];
 
 export function AboutView() {
+  const t = useTranslations("AboutPage");
   return (
     <Container>
       <div className="py-6">
-        <h1 className="text-3xl font-bold mb-4 text-green-600">About Me</h1>
+        <h1 className="text-3xl font-bold mb-4 text-green-600">{t("title")}</h1>
         <div className="flex flex-col items-center gap-y-4">
           <Image
             src="/hero.png"
@@ -30,31 +33,26 @@ export function AboutView() {
           />
           <div className="text-lg text-justify space-y-2 text-green-400">
             <p>
-              Hi! I&apos;m a junior front-end developer who loves building
-              modern, responsive web applications. I’m currently focused on
-              learning <strong>Next.js</strong> and improving my skills in
-              full-stack development.
+              {t.rich("desc.d0", {
+                strong: (chunks) => <strong>{chunks}</strong>,
+              })}
             </p>
             <p>
-              I&apos;m studying <strong>Software Engineering</strong> at{" "}
-              <strong>Khmelnytskyi National University</strong>. Before that, I
-              completed my college degree at{" "}
-              <strong>Khmelnytskyi Polytechnic College</strong>, where I built a
-              solid technical foundation.
+              {t.rich("desc.d1", {
+                strong: (chunks) => <strong>{chunks}</strong>,
+              })}
             </p>
             <p>
-              In the next 5 years, my goal is to become a{" "}
-              <strong>Senior Front-end Developer</strong> and to expand into{" "}
-              <strong>mobile app development</strong> as well. I&apos;m excited
-              to grow in both web and mobile technologies and build high-quality
-              user experiences.
+              {t.rich("desc.d2", {
+                strong: (chunks) => <strong>{chunks}</strong>,
+              })}
             </p>
           </div>
         </div>
 
         <section className="mt-4">
           <h2 className="text-2xl font-semibold mb-2 text-green-600">
-            Technologies I Use
+            {t("technologies")}
           </h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc list-inside text-green-600">
             {technologies.map((tech) => (
@@ -63,7 +61,7 @@ export function AboutView() {
           </ul>
         </section>
         <section className="text-green-600 mt-4">
-          <h2 className="text-2xl font-semibold mb-2">Connect with Me</h2>
+          <h2 className="text-2xl font-semibold mb-2">{t("connect")}</h2>
           <div className="flex flex-wrap gap-6 items-center text-lg">
             <Link
               href="https://github.com/lokki931"

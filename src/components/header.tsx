@@ -1,6 +1,7 @@
 import { Container } from "./container";
 import { Navbar } from "./navbar";
 import { Logo } from "./logo";
+import { LanguageSwitcher } from "./language-switcher";
 
 export const Header = () => {
   return (
@@ -8,6 +9,7 @@ export const Header = () => {
       <Container>
         <div className="flex items-center justify-between">
           <Logo />
+          <LanguageSwitcher />
           <Navbar />
         </div>
       </Container>

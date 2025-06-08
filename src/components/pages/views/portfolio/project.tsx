@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TProject } from "./data-portfolio";
+import { useTranslations } from "next-intl";
 
 type Props = {
   project: TProject;
@@ -20,6 +21,7 @@ const fadeInUp = {
   }),
 };
 const Project = ({ project, isSingleColumn, idx }: Props) => {
+  const t = useTranslations("PortfolioPage");
   const startIndex = 0;
   return (
     <motion.div
@@ -37,7 +39,7 @@ const Project = ({ project, isSingleColumn, idx }: Props) => {
       >
         <Image
           src={project.image}
-          alt={project.title}
+          alt={t(project.title)}
           width={600}
           height={400}
           className={clsx(
@@ -48,25 +50,25 @@ const Project = ({ project, isSingleColumn, idx }: Props) => {
         />
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-1 text-green-700">
-            {project.title}
+            {t(project.title)}
           </h3>
           <p className="text-green-600 mb-3">
             {isSingleColumn
-              ? project.description
-              : project.description.length > 95
-              ? project.description.slice(0, 95) + "..."
-              : project.description}
+              ? t(project.description)
+              : t(project.description).length > 95
+              ? t(project.description).slice(0, 95) + "..."
+              : t(project.description)}
           </p>
           <div className="flex items-center gap-4 text-green-600 text-xl">
             {project.buildby}
             <a href={project.github} target="_blank" rel="noopener noreferrer">
               <FaGithub
-                title="View on GitHub"
+                title={t("btn.github")}
                 className="hover:text-green-500"
               />
             </a>
             <a href={project.siteUrl} target="_blank" rel="noopener noreferrer">
-              <FaLink title="View on Site" className="hover:text-green-500" />
+              <FaLink title={t("btn.site")} className="hover:text-green-500" />
             </a>
           </div>
         </div>

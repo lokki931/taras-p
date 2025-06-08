@@ -2,36 +2,22 @@
 import { useIsMobile } from "@/hooks/is-mobile";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import clsx from "clsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const links = [
-  {
-    id: uuidv4(),
-    href: "/",
-    name: "Home",
-  },
-  {
-    id: uuidv4(),
-    href: "/skills",
-    name: "Skills",
-  },
-  {
-    id: uuidv4(),
-    href: "/portfolio",
-    name: "Portfolio",
-  },
-  {
-    id: uuidv4(),
-    href: "/about",
-    name: "About Me",
-  },
+  { id: uuidv4(), href: "/", labelKey: "navbar.home" },
+  { id: uuidv4(), href: "/skills", labelKey: "navbar.skills" },
+  { id: uuidv4(), href: "/portfolio", labelKey: "navbar.portfolio" },
+  { id: uuidv4(), href: "/about", labelKey: "navbar.about" },
 ];
 
 export const Navbar = () => {
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
   const isMobile = useIsMobile();
@@ -64,7 +50,7 @@ export const Navbar = () => {
                     pathName === link.href && "opacity-70 font-bold"
                   )}
                 >
-                  {link.name}
+                  {t(link.labelKey)}
                 </Link>
               </li>
             ))}
@@ -84,7 +70,7 @@ export const Navbar = () => {
                 pathName === link.href && "text-green-400 font-bold"
               )}
             >
-              {link.name}
+              {t(link.labelKey)}
             </Link>
           </li>
         ))}

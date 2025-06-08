@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import { Container } from "./container";
 import { Logo } from "./logo";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("footer");
   return (
     <footer className="py-4 border-t border-green-600">
       <Container>
@@ -18,7 +21,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="text-green-600">
-            © {new Date().getFullYear()} Taras P. All rights reserved.
+            © {new Date().getFullYear()} Taras P. {t("copy")}
           </div>
         </div>
       </Container>
