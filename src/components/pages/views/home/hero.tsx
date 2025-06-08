@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { FaRocket, FaPaintBrush, FaHandshake } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { Benefit } from "./benefit";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Hero() {
   const t = useTranslations("HomePage");
