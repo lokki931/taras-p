@@ -44,6 +44,10 @@
       "habit": {
         "title": "Habit Tracker",
         "description": "A minimalist habit tracker using React and localStorage for persistence."
+      },
+      "booking": {
+        "title": "Mini Booker",
+        "description": "MiniBooker is a SaaS platform for small businesses to manage bookings, staff, and working hours. Perfect for beauty salons, coffee shops, service centers, and any business that needs a simple, modern tool for online appointment scheduling."
       }
     },
     "btn": {

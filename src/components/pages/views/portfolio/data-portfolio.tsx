@@ -39,4 +39,13 @@ export const projects = [
     siteUrl: "https://tracker-hobies.vercel.app/",
     buildby: <FaReact title="ReactJS" />,
   },
+  {
+    id: uuidv4(),
+    title: "projects.booking.title",
+    description: "projects.booking.description",
+    image: "/04_img.png",
+    github: "https://github.com/lokki931/mini-booker",
+    siteUrl: "https://mini-booker.vercel.app/",
+    buildby: <TbBrandNextjs title="NextJs" />,
+  },
 ];
