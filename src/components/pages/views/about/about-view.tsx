@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 const technologies = [
   "JavaScript",
+  "TypeScript",
   "React.js",
   "Next.js",
   "Tailwind CSS",
@@ -15,6 +16,10 @@ const technologies = [
   "Git",
   "Prisma",
   "SQLite",
+  "Neon",
+  "Better Auth",
+  "Drizzle Orm",
+  "Postgresql",
 ];
 
 export function AboutView() {

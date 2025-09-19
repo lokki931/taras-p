@@ -7,6 +7,9 @@ import {
   SiTypescript,
   SiPrisma,
   SiRedux,
+  SiPostgresql,
+  SiDrizzle,
+  SiBetterstack,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -100,6 +103,24 @@ export const learning = [
     id: uuidv4(),
     name: "Framer Motion",
     icon: <FaReact className="text-pink-400" />,
+    level: 40,
+  },
+  {
+    id: uuidv4(),
+    name: "Neon + Postgresql",
+    icon: <SiPostgresql className="text-green-400" />,
+    level: 40,
+  },
+  {
+    id: uuidv4(),
+    name: "Drizzle ORM",
+    icon: <SiDrizzle className="text-gray-400" />,
+    level: 40,
+  },
+  {
+    id: uuidv4(),
+    name: "Better Auth",
+    icon: <SiBetterstack className="text-orange-400" />,
     level: 40,
   },
 ];
